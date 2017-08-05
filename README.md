@@ -21,3 +21,5 @@ http://imgur.com/a/0mdZd
 This tool shows the service status of services like "mysql", "ssh", "ntp", "snmpd", "apache2", "bluetooth", "networking", "cron". These are stored in an array on line 247 in ssh.php . Please edit the services according your needs.
 
 ///This is a very basic project and no implementations to make it secure have been done. All that is coming in the future//
+
+Run this tool on your webserver and make sure you can ssh your pi from that network.
