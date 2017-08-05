@@ -1,0 +1,91 @@
+2005-11-11 David Eder <david@eder.us>
+	* Finished snmp v3 support
+
+2005-08-05 David Eder <david@eder.us>
+	* Updated rfc1155_Counter to allow an alternate decoding for
+          values that should decode as negative. (SNMP_ABS_COUNTER)
+
+2005-08-01 David Eder <david@eder.us>
+	* Updated is_printable to accept \r, \n and \t.
+
+2005-06-09 David Eder <david@eder.us>
+
+	* Update build_varbind to support multiple objects
+
+2004-10-06 David Eder <david@eder.us>
+
+	* Added simple MIB compiler.
+
+2004-10-04 David Eder <david@eder.us>
+
+	* Hybridized blocking/nonblocking socket I/O to decrease CPU load
+          while waiting for timeout.
+
+2004-08-27 David Eder <david@eder.us>
+
+	* Added v2 Bulk Get.
+
+2004-08-24 David Eder <david@eder.us>
+
+	* Fixed bug for ObjectIDs not starting with a dot.
+        * Added a flag for short int based length encoding to be compatible
+          with Cisco software.
+
+2004-08-16 David Eder <david@eder.us>
+
+	* Added Trap support.
+	* Fixed bug encoding IPAddresses.
+
+2004-08-12 David Eder <david@eder.us>
+
+	* Added support for multi_get, multi_walk, and multi_set to poll
+          in parallel.
+        * Removed packet cache (should never have been added in the first
+          place).
+
+2004-08-10 David Eder <david@eder.us>
+
+        * Fixed bug that allowed arbitrary hosts to inject packets.
+        * Added microsleep to help keep load in check while waiting for
+          packets.
+
+2004-08-02 David Eder <david@eder.us>
+
+	* Added timeout.
+	* Added packet cache.
+        * Added 'x' integer, 't' time ticks, 'x' hex string, 's' string,
+          'a' ip address, 'o' object id, and 'n' null types to snmp::set.
+	* Change several bitwise operations to arithmetic to avoid overflow
+          to float problems.
+
+2004-07-06 David Eder <david@eder.us>
+
+	* Converted needed portions of library to PHP.
+	* Replaced management with an smnp class.
+
+2003-10-26  Justin Warren <justin.warren@unicity.com.au>
+
+	* Added SNMPv2 support and fixed compatibility bugs caused
+	by ucd-snmp returning Context Specific tags.
+
+2003-09-21  Justin Warren <justin.warren@unicity.com.au>
+    
+	* Added licensing information to release under LGPL.
+
+2003-09-19  Jim Crumpler  <jgc@pringle.jgc.unicity.com.au>
+
+	* lib/libsnmp/rfc1155.py (OctetString.decodeContents): changed all
+	decodeContents() methods to set the local value of the object and
+	to return self.  This saves alot of object creations, however we
+	need to make sure we don't use an object as a factory and expect
+	its value to not change.
+
+2003-09-18  Jim Crumpler  <jgc@pringle.jgc.unicity.com.au>
+
+	* lib/libsnmp/rfc1155.py (Asn1Object.decode): move the tag and
+	length portions of decode() to decodeTag() and decodeLength()
+
+0.0.1     2003-08-13  Justin Warren <justin.warren@unicity.com.au>
+
+        * First version of libsnmp added to CVS
+

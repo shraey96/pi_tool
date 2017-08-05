@@ -1,0 +1,123 @@
+body
+{
+   background-color: ghostwhite;
+    margin: 0;
+}
+
+#header
+        {
+          
+            background-color: #333333;
+            color: white;
+            padding: 30 30 30 30;
+           
+        }
+        
+    #header h1
+        {
+             font-size: 50px;
+        }
+
+
+
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    top: 0;
+}
+
+
+
+    #main .list-group span
+{
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.list-group a
+{
+    cursor: pointer;
+}
+.list-group a:hover
+{
+    background-color: darkseagreen;
+}
+#gif_img
+{
+padding-left: 50%;
+padding-right: 50%;
+padding-top: 200px;
+ 
+
+}
+
+
+
+    #header .create
+        {
+            padding-top: 20px;
+        }
+    
+        
+    #main 
+        {
+            font-size: 15px;
+            margin-top: 20px;
+        }
+        
+     #main .badge
+{
+    margin-left: 120px;
+}
+        
+.well
+{
+    margin-top:20px;
+}
+
+
+
+
+.panel-default-red > .panel-heading {
+    background: orangered;
+    color: #ffffff;
+    
+}
+
+
+.dash-box
+{
+    text-align: center;
+}
+
+#sidebar
+{
+    height: 100%;
+    width: 250px;
+    background-color: gray;
+    margin-top: -20px;
+    overflow-y: auto;
+    margin-left: -15px;
+    
+}
+
+#server
+{
+margin-left: -100px;
+margin-top: -18px;
+}
+
+#serverStats
+{
+    margin-top: 40px;
+}
+
+#graphs
+{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+

@@ -1,0 +1,20 @@
+{
+    "name": "brexis/phpsnmp",
+    "description": "phpSNMP is an SNMP implementation based on libsnmp, which is written in Python. It has been ported to 100% pure PHP.",
+    "type": "library",
+    "keywords": ["php", "snmp", "net-snmp"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Boris KOUMONDJI",
+            "email": "brexis2009@yahoo.fr"
+        }
+    ],
+    "autoload": {
+        "files": ["snmp.php"]
+    },
+    "minimum-stability": "dev",
+    "require": {
+      "php": ">=5.6.13"
+    }
+}

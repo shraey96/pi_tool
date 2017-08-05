@@ -1,0 +1,49 @@
+snmpconf -r none -g basic_setup
+
+
+gives interfaces : 1.3.6.1.2.1.2.2.1.2
+gives ip corresponding to interfaces: 1.3.6.1.2.1.4.20.1.2
+gives cpu load: .1.3.6.1.2.1.25.3.3.1.2
+
+stress test: for i in 1 2 3 4; do while : ; do : ; done & done
+for i in 1 2 3 4; do kill %$i; done
+
+Total Swap Size: .1.3.6.1.4.1.2021.4.3.0
+Available Swap Space: .1.3.6.1.4.1.2021.4.4.0
+Total RAM in machine: .1.3.6.1.4.1.2021.4.5.0
+Total RAM used: .1.3.6.1.4.1.2021.4.6.0
+Total RAM Free: .1.3.6.1.4.1.2021.4.11.0
+Total RAM Shared: .1.3.6.1.4.1.2021.4.13.0
+Total RAM Buffered: .1.3.6.1.4.1.2021.4.14.0
+Total Cached Memory: .1.3.6.1.4.1.2021.4.15.0
+snmpEngineTime (1.3.6.1.6.3.10.2.1.3)
+uptime: (1.3.6.1.2.1.1.3)
+
+1.3.6.1.2.1.2.2.1.10 (ifInOctets).
+1.3.6.1.2.1.2.2.1.16 (ifOutOctets)
+
+var current    = ifInOctetsCurrent  
+var previous   = ifInOctetsPrevious  
+var pollPeriod = time //seconds between polling  
+var maxValue   = 4294967295 //2^32-1
+
+var bps // bits/second -- our target value.
+
+if(current < previous){  
+  //counter rolled over; need to adjust value.
+  current = maxValue + current
+
+  //caution - don't store the adjusted ${current}
+  //value to ${previous} in preparation for
+  //the next cycle! Use the original value!
+}
+
+bps = (current - previous) * 8 / pollPeriod  
+
+give interface up/down status : 1.3.6.1.2.1.2.2.1.8
+
+$ cat /etc/passwd | grep '/home' | cut -d: -f1
+
+http://api.jquery.com/jquery.grep/
+http://jsfiddle.net/yDbGq/1/
+http://jsfiddle.net/yDbGq/
